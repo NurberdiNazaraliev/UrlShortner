@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shorten your url</title>
+</head>
+<body>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    <button type="submit" name="button">Save</button>
+</form>
+
+<h1>{{a}}</h1>
+
+<a href="{% url 'get_og_link' %}">Redirect to Original URL</a>
+</body>
+</html>
